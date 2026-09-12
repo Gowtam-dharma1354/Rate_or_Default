@@ -1,0 +1,90 @@
+/* CompetitionTimer Component Styles */
+
+.competition-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  min-width: 120px;
+}
+
+.timer-block,
+.violation-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+}
+
+.timer-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.timer-display,
+.violation-count {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.violation-block {
+  border-left: 1px solid var(--border-color);
+  padding-left: 12px;
+}
+
+.violation-count {
+  color: #ff7a7a;
+  font-size: 22px;
+}
+
+.timer-status {
+  font-size: 10px;
+  color: var(--color-red);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 650px) {
+  .competition-timer {
+    min-width: 100px;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .timer-block,
+  .violation-block {
+    min-width: 86px;
+  }
+
+  .timer-display,
+  .violation-count {
+    font-size: 18px;
+  }
+
+  .timer-label {
+    font-size: 9px;
+  }
+}

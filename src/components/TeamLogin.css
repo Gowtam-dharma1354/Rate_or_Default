@@ -1,0 +1,349 @@
+/* TeamLogin Component Styles */
+
+.team-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  padding: 20px;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 560px;
+}
+
+.login-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.back-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-blue);
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--color-navy);
+}
+
+.login-brand {
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
+}
+
+.admin-panel-shell .login-brand,
+.admin-panel-shell .login-brand .club-brand-top,
+.admin-panel-shell .login-brand .club-brand-lock {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.admin-panel-shell .login-brand .club-brand-sub {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.club-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  font-family: "Space Mono", monospace;
+}
+
+.club-brand-top {
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--text-primary);
+  letter-spacing: 5px;
+}
+
+.club-brand-sub {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: var(--text-light);
+  letter-spacing: 2px;
+}
+
+.club-brand-lock {
+  font-size: clamp(34px, 4.8vw, 64px);
+  color: var(--color-blue);
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.login-form-section {
+  background: var(--bg-secondary);
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+  letter-spacing: 1px;
+  font-family: "Space Mono", monospace;
+}
+
+.form-description {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0 0 24px;
+}
+
+.team-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-select {
+  padding: 12px 14px;
+  font-size: 14px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+textarea.form-input {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-input::placeholder {
+  color: var(--text-light);
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(46, 80, 144, 0.1);
+}
+
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.member-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.member-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.member-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--text-primary);
+}
+
+.remove-member-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--color-red);
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.secondary-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error-message {
+  padding: 12px 14px;
+  background: #FFE8E8;
+  border: 1px solid #FFCCCC;
+  border-radius: 6px;
+  color: var(--color-red);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.success-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.success-badge {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b9c69;
+  letter-spacing: 1px;
+}
+
+.success-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+.success-row span {
+  color: var(--text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.success-code-box {
+  background: rgba(46, 80, 144, 0.08);
+  border: 1px solid var(--border-color);
+  color: var(--color-blue);
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.success-inline {
+  padding: 12px 14px;
+  background: rgba(27, 156, 105, 0.08);
+  border: 1px solid rgba(27, 156, 105, 0.35);
+  border-radius: 6px;
+  color: #1b9c69;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-panel-shell {
+  padding-top: 24px;
+}
+
+.admin-panel-content {
+  max-width: 980px;
+}
+
+.admin-header-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-panel-block {
+  margin-bottom: 30px;
+}
+
+.admin-auth-card {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.submit-btn {
+  padding: 14px 20px;
+  background: var(--color-navy);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--color-navy-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.submit-btn:disabled {
+  background: var(--color-gray);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.login-footer {
+  text-align: center;
+}
+
+.footer-note {
+  font-size: 12px;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 650px) {
+  .login-form-section {
+    padding: 24px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  .submit-btn {
+    padding: 12px 16px;
+  }
+}
