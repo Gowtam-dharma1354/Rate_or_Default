@@ -208,8 +208,14 @@ export default function Admin() {
     setTeamLoading(true);
 
     try {
+      if (!session?.user?.id) {
+        setTeamError("Admin session is not active. Please sign in again and try once more.");
+        return;
+      }
+
       const teamCode = await generateUniqueTeamCode();
       const teamPayload = {
+        auth_uid: session.user.id,
         team_name: trimmedName,
         team_code: teamCode,
         batch,

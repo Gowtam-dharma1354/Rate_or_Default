@@ -49,11 +49,12 @@ export default function FileQuestion({
     setSubmitError("");
 
     try {
-      const { data: sessionData } = await supabase.auth.getSession();
-      const token = sessionData?.session?.access_token;
-
-      if (!token) {
-        throw new Error("Your login session has expired. Please sign in again.");
+      let token;
+      try {
+        const { data: sessionData } = await supabase.auth.getSession();
+        token = sessionData?.session?.access_token || null;
+      } catch (authError) {
+        console.warn("Unable to read auth session for answer submission:", authError);
       }
 
       const response = await postAnswerSubmit(token, {

@@ -47,12 +47,41 @@ const QUESTION_1 = {
   prompt:
     "# QUESTION 1 — RATE THE COMPANY\n\nBased on the information available as of 31 March 2025, what credit rating would you assign to Falcon Electronics Ltd.?\n\nSelect ONE:",
   options: [
-    { label: "A", value: "A+", text: "A+" },
-    { label: "B", value: "A", text: "A" },
-    { label: "C", value: "BBB", text: "BBB" },
-    { label: "D", value: "BB", text: "BB" }
+    { label: "A", value: "A", text: "A+" },
+    { label: "B", value: "B", text: "A" },
+    { label: "C", value: "C", text: "BBB" },
+    { label: "D", value: "D", text: "BB" }
   ],
-  answer: "BBB"
+  answer: "C"
+};
+
+const QUESTION_2 = {
+  id: "Q2",
+  prompt:
+    "# QUESTION 2 — RATIONALE FOR YOUR RATING\n\nYou have assigned Falcon Electronics Ltd. a credit rating based on the information available as of 31 March 2025. Which of the following is the best rationale for that rating?\n\nSelect ONE:",
+  options: [
+    {
+      label: "A",
+      value: "A",
+      text: "Strong revenue growth and a premium market position support the rating, but rising leverage and weaker cash generation prevent a stronger rating."
+    },
+    {
+      label: "B",
+      value: "B",
+      text: "The company has no history of default, so its rating should be A regardless of leverage and cash flow trends."
+    },
+    {
+      label: "C",
+      value: "C",
+      text: "The company is a large player with very strong cash generation, so the rating should be A+."
+    },
+    {
+      label: "D",
+      value: "D",
+      text: "The company’s debt is low and interest coverage is high, so the rating should be BBB."
+    }
+  ],
+  answer: "A"
 };
 
 export const COMMON_FALCON_CASES = Array.from({ length: 10 }, (_, index) => {
@@ -63,6 +92,6 @@ export const COMMON_FALCON_CASES = Array.from({ length: 10 }, (_, index) => {
     caseNumber,
     caseTitle: `CASE ${String(caseNumber).padStart(2, "0")}: PROJECT FALCON`,
     caseText: CASE_TEXT,
-    questions: [QUESTION_1]
+    questions: [QUESTION_1, QUESTION_2]
   };
 });

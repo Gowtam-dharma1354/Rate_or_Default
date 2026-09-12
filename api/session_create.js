@@ -63,33 +63,16 @@ export default async function handler(req, res) {
       .single();
     if (sessErr) throw sessErr;
 
-    // Assign a question for level 1
-    // Choose a random active question
-    const { data: questions } = await supabase
-      .from('questions')
-      .select('id')
-      .eq('active', true);
+    // Questions are now managed in the frontend hardcoded case files, so session creation
+    // no longer depends on the legacy questions table.
+    await supabase.from('competition_events').insert({
+      session_id: newSession.id,
+      team_id: team.id,
+      event_type: 'SESSION_STARTED',
+      metadata: { level: 1 }
+    });
 
-    const qPool = (questions || []).map((q) => q.id);
-    if (qPool.length === 0) {
-      return res.status(500).json({ error: 'No questions available' });
-    }
-    const randomQ = qPool[Math.floor(Math.random() * qPool.length)];
-
-    const { data: assignment, error: assignErr } = await supabase
-      .from('session_level_assignments')
-      .insert({ session_id: newSession.id, level: 1, question_id: randomQ, status: 'IN_PROGRESS' })
-      .select()
-      .single();
-    if (assignErr) throw assignErr;
-
-    // Log event
-    await supabase.from('competition_events').insert({ session_id: newSession.id, team_id: team.id, event_type: 'SESSION_STARTED', metadata: { level: 1 } });
-
-    // Fetch question text to return (without answers)
-    const { data: questionRow } = await supabase.from('questions').select('id, category, question_text').eq('id', randomQ).single();
-
-    return res.status(201).json({ session: newSession, currentQuestion: questionRow });
+    return res.status(201).json({ session: newSession, currentQuestion: null });
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: 'Server error', details: err.message });
