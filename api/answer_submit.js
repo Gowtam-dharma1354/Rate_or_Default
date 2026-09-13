@@ -175,6 +175,16 @@ export default async function handler(req, res) {
 
     if (upsertScoreErr) throw upsertScoreErr;
 
+    const { error: syncSessionScoreErr } = await supabase
+      .from('competition_sessions')
+      .update({
+        score: nextTotalScore,
+        updated_at: new Date().toISOString()
+      })
+      .eq('id', session.id);
+
+    if (syncSessionScoreErr) throw syncSessionScoreErr;
+
     await supabase.from('competition_events').insert({
       session_id: session.id,
       team_id: team.id,

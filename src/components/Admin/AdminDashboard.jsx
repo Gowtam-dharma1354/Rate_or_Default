@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 import "./AdminDashboard.css";
 import AdminFilterBar from "./AdminFilterBar";
 import LiveStandingsTable from "./AdminStandingsTable";
-import { calculateRankings, calculateScore, formatTime } from "../../lib/rankingService";
+import { calculateRankings, formatTime } from "../../lib/rankingService";
 import { COMPETITION_CONFIG } from "../../data/competitionConfig";
 import { supabase } from "../../lib/supabaseClient";
 
@@ -45,6 +45,12 @@ export default function AdminDashboard({ onTeamClick }) {
 
         if (sessionError) throw sessionError;
 
+        const { data: scoreRows, error: scoreError } = await supabase
+          .from("team_score_dashboard")
+          .select("team_id, total_score");
+
+        if (scoreError) throw scoreError;
+
         const { data: eventRows, error: eventError } = await supabase
           .from("competition_events")
           .select("team_id, metadata, created_at")
@@ -66,6 +72,14 @@ export default function AdminDashboard({ onTeamClick }) {
         });
 
         const sessionMap = new Map((sessionRows || []).map((session) => [session.team_id, session]));
+        const scoreMap = new Map();
+
+        (scoreRows || []).forEach((scoreRow) => {
+          const teamId = scoreRow.team_id;
+          scoreMap.set(teamId, {
+            score: Number(scoreRow.total_score ?? 0)
+          });
+        });
 
         const liveTeams = (teamRows || []).map((team) => {
           const session = sessionMap.get(team.id);
@@ -76,11 +90,12 @@ export default function AdminDashboard({ onTeamClick }) {
             : session ? Number(session.current_level ?? 1) : 1;
           const filesUnlocked = sessionStatus === "COMPLETED" ? totalFiles : Math.max(0, currentLevel - 1);
           const latestSolveSeconds = latestSolveByTeam.get(team.id)?.value ?? null;
+          const storedScore = scoreMap.get(team.id)?.score ?? 0;
 
           return {
             ...team,
             team_id: team.id,
-            score: calculateScore({ files_unlocked: filesUnlocked }),
+            score: storedScore,
             status: sessionStatus,
             current_file: currentLevel,
             files_unlocked: filesUnlocked,

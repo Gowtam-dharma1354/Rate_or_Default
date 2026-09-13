@@ -8,7 +8,7 @@
 
 import React, { useState, useEffect } from "react";
 import "./AdminTeamDetails.css";
-import { calculateScore, getCurrentFileDisplay, getFilesUnlockedDisplay, getStatusStyle } from "../../lib/rankingService";
+import { getCurrentFileDisplay, getFilesUnlockedDisplay, getStatusStyle } from "../../lib/rankingService";
 import { COMPETITION_CONFIG } from "../../data/competitionConfig";
 import { supabase } from "../../lib/supabaseClient";
 
@@ -42,7 +42,17 @@ export default function TeamDetails({ teamId, onClose }) {
 
         if (sessionError) throw sessionError;
 
+        const { data: scoreRows, error: scoreError } = await supabase
+          .from("team_score_dashboard")
+          .select("team_id, total_score")
+          .eq("team_id", teamId)
+          .order("started_at", { ascending: false })
+          .limit(1);
+
+        if (scoreError) throw scoreError;
+
         const session = sessionRows?.[0] || {};
+        const storedScore = Number(scoreRows?.[0]?.total_score ?? 0);
         const currentLevel = session.status === "COMPLETED"
           ? totalFiles
           : Number(session.current_level ?? 1);
@@ -56,7 +66,7 @@ export default function TeamDetails({ teamId, onClose }) {
           team_code: teamRow?.team_code ?? "—",
           batch: teamRow?.batch ?? "—",
           status: session.status ?? teamRow?.status ?? "NOT_STARTED",
-          score: calculateScore({ files_unlocked: filesUnlocked }),
+          score: storedScore,
           files_unlocked: filesUnlocked,
           current_file: currentLevel,
           last_file_unlocked_at: session.completed_at ?? session.started_at ?? "—",

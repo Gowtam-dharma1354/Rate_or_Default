@@ -105,7 +105,12 @@ export const getFileScore = (fileNumber) => {
   return 0;
 };
 
-export const calculateScore = (team) => {
+export const calculateScore = (team = {}) => {
+  const explicitScore = Number(team.score);
+  if (Number.isFinite(explicitScore) && explicitScore >= 0) {
+    return explicitScore;
+  }
+
   const filesUnlocked = Math.max(0, Number(team.files_unlocked) || 0);
   let score = 0;
   for (let fileNumber = 1; fileNumber <= filesUnlocked; fileNumber += 1) {
