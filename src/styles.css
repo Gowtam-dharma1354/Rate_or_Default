@@ -12,6 +12,8 @@
   --color-navy-light: #1E3A5F;
   --color-blue: #2E5090;
   --color-blue-light: #4A7ABF;
+  --color-yellow: rgb(212, 196, 0);
+  --color-yellow-light: rgba(212, 196, 0, 0.22);
   --color-green: #2D7F4A;
   --color-green-light: #4BA366;
   --color-red: #A82E2E;
@@ -223,7 +225,8 @@ select:focus {
   line-height: 1;
   font-weight: 800;
   letter-spacing: 3px;
-  color: var(--color-blue);
+  color: var(--color-yellow);
+  text-shadow: 0 0 16px rgba(255, 232, 31, 0.35);
 }
 
 .topbar-club-brand {
@@ -304,6 +307,18 @@ h2 {
 .primary-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(120, 155, 215, .25);
+}
+
+.submit-btn {
+  background: var(--color-yellow);
+  color: #081525;
+  box-shadow: 0 8px 20px rgba(255, 232, 31, 0.24);
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--color-blue);
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(46, 80, 144, 0.28);
 }
 
 .secondary-btn {

@@ -9,7 +9,7 @@ export const COMPETITION_CONFIG = {
   TOTAL_FILES: 10,
 
   // Event branding
-  EVENT_NAME: "LOCKED FILES",
+  EVENT_NAME: "RATING WARS",
   CLUB_NAME: "NISM",
   CLUB_FULL_NAME: "FinTech & Quant Club",
 

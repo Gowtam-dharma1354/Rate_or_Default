@@ -327,20 +327,87 @@ function PlayerExperience() {
     }
   }, [currentScreen, teamData]);
 
-  const createCompetitionSession = async (teamInfo) => {
-    const { data: existingSession } = await supabase
-      .from("competition_sessions")
-      .select("id, team_id, status, current_level, score, fullscreen_violations")
-      .eq("team_id", teamInfo.teamId)
-      .order("created_at", { ascending: false })
-      .limit(1)
-      .maybeSingle();
+  const resetTeamProgress = async (teamId) => {
+    if (!teamId) return;
 
-    if (existingSession) {
-      setFullscreenViolationCount(existingSession.fullscreen_violations ?? 0);
-      return existingSession;
+    const { data: existingSessions, error: sessionFetchError } = await supabase
+      .from("competition_sessions")
+      .select("id")
+      .eq("team_id", teamId);
+
+    if (sessionFetchError) {
+      throw sessionFetchError;
     }
 
+    const sessionIds = (existingSessions || []).map((session) => session.id);
+
+    if (sessionIds.length > 0) {
+      const { error: clearAssignmentsErr } = await supabase
+        .from("session_level_assignments")
+        .delete()
+        .in("session_id", sessionIds);
+
+      if (clearAssignmentsErr) {
+        throw clearAssignmentsErr;
+      }
+    }
+
+    const { error: clearAnswersErr } = await supabase
+      .from("team_case_answers")
+      .delete()
+      .eq("team_id", teamId);
+
+    if (clearAnswersErr) {
+      throw clearAnswersErr;
+    }
+
+    const { error: clearScoresErr } = await supabase
+      .from("team_case_scores")
+      .delete()
+      .eq("team_id", teamId);
+
+    if (clearScoresErr) {
+      throw clearScoresErr;
+    }
+
+    const { error: clearAttemptsErr } = await supabase
+      .from("attempts")
+      .delete()
+      .eq("team_id", teamId);
+
+    if (clearAttemptsErr) {
+      throw clearAttemptsErr;
+    }
+
+    const { error: clearSyncLogErr } = await supabase
+      .from("google_sheet_sync_log")
+      .delete()
+      .eq("team_id", teamId);
+
+    if (clearSyncLogErr) {
+      throw clearSyncLogErr;
+    }
+
+    const { error: clearEventsErr } = await supabase
+      .from("competition_events")
+      .delete()
+      .eq("team_id", teamId);
+
+    if (clearEventsErr) {
+      throw clearEventsErr;
+    }
+
+    const { error: clearSessionsErr } = await supabase
+      .from("competition_sessions")
+      .delete()
+      .eq("team_id", teamId);
+
+    if (clearSessionsErr) {
+      throw clearSessionsErr;
+    }
+  };
+
+  const createCompetitionSession = async (teamInfo) => {
     const { data: settingsRow } = await supabase
       .from("competition_settings")
       .select("duration_seconds")
@@ -383,6 +450,7 @@ function PlayerExperience() {
     clearPlayerState();
 
     try {
+      await resetTeamProgress(teamInfo.teamId);
       const session = await createCompetitionSession(teamInfo);
 
       // Update session status to ACTIVE when competition starts

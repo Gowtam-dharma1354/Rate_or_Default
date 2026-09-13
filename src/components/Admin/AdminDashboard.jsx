@@ -143,11 +143,11 @@ export default function AdminDashboard({ onTeamClick }) {
       filtered = filtered.filter((team) => team.status === filters.status);
     }
 
-    // Current file filter
+    // Current case filter
     if (filters.file !== "All") {
       filtered = filtered.filter((team) => {
         const paddedFile = String(team.current_file).padStart(2, "0");
-        return `FILE ${paddedFile}` === filters.file;
+        return `CASE ${paddedFile}` === filters.file;
       });
     }
 

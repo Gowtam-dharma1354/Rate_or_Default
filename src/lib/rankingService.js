@@ -151,9 +151,9 @@ export const getCurrentFileDisplay = (team, totalFiles) => {
   }
   if (team.current_file && team.current_file > 0) {
     const paddedFile = String(team.current_file).padStart(2, "0");
-    return `FILE ${paddedFile}`;
+    return `CASE ${paddedFile}`;
   }
-  return "FILE 01";
+  return "CASE 01";
 };
 
 /**

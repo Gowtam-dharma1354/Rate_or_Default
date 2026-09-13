@@ -31,9 +31,9 @@ export default function ChallengeScreen({
         <div className="challenge-head">
           <div>
             <div className="eyebrow">
-              FILE {padLevel(currentLevel)} / {padLevel(totalLevels)}
+              CASE {padLevel(currentLevel)} / {padLevel(totalLevels)}
             </div>
-            <h2>LOCKED FILE {padLevel(currentLevel)}</h2>
+            <h2>CASE {padLevel(currentLevel)}</h2>
           </div>
           <div className="attempt-counter">
             ATTEMPTS<br />
@@ -42,12 +42,12 @@ export default function ChallengeScreen({
         </div>
 
         <p className="instruction">
-          Read the question carefully and enter your complete answer to decrypt the file.
+          Read the question carefully and enter your answer for this case.
         </p>
 
         <div className="progress-block">
-          <div className="progress-label">FILE PROGRESS</div>
-          <div className="progress-track" aria-label={`File ${currentLevel} of ${totalLevels}`}>
+          <div className="progress-label">CASE PROGRESS</div>
+          <div className="progress-track" aria-label={`Case ${currentLevel} of ${totalLevels}`}>
             {Array.from({ length: totalLevels }, (_, index) => {
               const levelNumber = index + 1;
               const isComplete = index < currentLevel - 1;

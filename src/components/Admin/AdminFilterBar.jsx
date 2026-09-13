@@ -79,15 +79,15 @@ export default function FilterBar({ onFilterChange, totalTeams, totalFiles }) {
         </div>
 
         <div className="filter-group">
-          <label htmlFor="file-select">Current File</label>
+          <label htmlFor="file-select">Current Case</label>
           <select value={selectedFile} onChange={(e) => handleFileChange(e.target.value)} className="filter-select">
             <option value="All">All</option>
             {Array.from({ length: totalFiles }, (_, i) => {
               const fileNum = i + 1;
               const paddedFile = String(fileNum).padStart(2, "0");
               return (
-                <option key={fileNum} value={`FILE ${paddedFile}`}>
-                  FILE {paddedFile}
+                <option key={fileNum} value={`CASE ${paddedFile}`}>
+                  CASE {paddedFile}
                 </option>
               );
             })}

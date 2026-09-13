@@ -83,7 +83,7 @@ export default function TaskCompletedPage({ totalFiles, teamName, batch, onResta
 
         <div className="completed-footer">
           <p className="footer-tagline">
-            Congratulations on completing LOCKED FILES!
+            Congratulations on completing RATING WARS!
             <br />
             Your performance has been recorded.
           </p>

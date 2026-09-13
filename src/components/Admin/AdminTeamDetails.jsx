@@ -158,17 +158,17 @@ export default function TeamDetails({ teamId, onClose }) {
       {/* Progress Section */}
       <div className="progress-section">
         <div className="progress-card">
-          <div className="progress-label">Files Unlocked</div>
+          <div className="progress-label">Cases Solved</div>
           <div className="progress-value">{filesDisplay}</div>
         </div>
 
         <div className="progress-card">
-          <div className="progress-label">Current File</div>
+          <div className="progress-label">Current Case</div>
           <div className="progress-value current">{currentFileDisplay}</div>
         </div>
 
         <div className="progress-card">
-          <div className="progress-label">Last File Unlocked</div>
+          <div className="progress-label">Last Solved</div>
           <div className="progress-value timestamp">{team.last_file_unlocked_at || "—"}</div>
         </div>
 
@@ -197,14 +197,14 @@ export default function TeamDetails({ teamId, onClose }) {
         </div>
       </div>
 
-      {/* File Progression */}
+      {/* Case Progression */}
       <div className="file-progression-section">
-        <h2>File Progression History</h2>
+        <h2>Case Progression History</h2>
         <div className="file-list">
           {Array.from({ length: totalFiles }, (_, i) => {
             const fileNum = i + 1;
             const paddedFile = String(fileNum).padStart(2, "0");
-            const fileDisplay = `FILE ${paddedFile}`;
+            const fileDisplay = `CASE ${paddedFile}`;
             const fileHistory = team.file_history?.find((fh) => fh.file_number === fileNum);
 
             const isUnlocked = fileNum <= team.files_unlocked;

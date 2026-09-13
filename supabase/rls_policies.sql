@@ -8,6 +8,9 @@ ALTER TABLE public.competition_sessions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.session_level_assignments ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.attempts ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.competition_events ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.team_case_answers ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.team_case_scores ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.google_sheet_sync_log ENABLE ROW LEVEL SECURITY;
 
 -- TEAMS: allow authenticated users to manage their own team row when auth_uid is set
 DROP POLICY IF EXISTS teams_select_own ON public.teams;
@@ -92,10 +95,28 @@ CREATE POLICY sessions_update_own ON public.competition_sessions
     )
   );
 
+DROP POLICY IF EXISTS sessions_delete_own ON public.competition_sessions;
+CREATE POLICY sessions_delete_own ON public.competition_sessions
+  FOR DELETE USING (
+    exists (
+      select 1 from public.teams t where t.id = public.competition_sessions.team_id and t.auth_uid = auth.uid()
+    )
+  );
+
 -- SESSION_LEVEL_ASSIGNMENTS: allow owners to view assignments for sessions owned by them
 DROP POLICY IF EXISTS assignments_select_own ON public.session_level_assignments;
 CREATE POLICY assignments_select_own ON public.session_level_assignments
   FOR SELECT USING (
+    exists (
+      select 1 from public.competition_sessions s
+      join public.teams t on s.team_id = t.id
+      where s.id = public.session_level_assignments.session_id and t.auth_uid = auth.uid()
+    )
+  );
+
+DROP POLICY IF EXISTS assignments_delete_own ON public.session_level_assignments;
+CREATE POLICY assignments_delete_own ON public.session_level_assignments
+  FOR DELETE USING (
     exists (
       select 1 from public.competition_sessions s
       join public.teams t on s.team_id = t.id
@@ -121,6 +142,16 @@ CREATE POLICY attempts_insert_own ON public.attempts
       select 1 from public.competition_sessions s
       join public.teams t on s.team_id = t.id
       where s.id = session_id and t.auth_uid = auth.uid()
+    )
+  );
+
+DROP POLICY IF EXISTS attempts_delete_own ON public.attempts;
+CREATE POLICY attempts_delete_own ON public.attempts
+  FOR DELETE USING (
+    exists (
+      select 1 from public.competition_sessions s
+      join public.teams t on s.team_id = t.id
+      where s.id = public.attempts.session_id and t.auth_uid = auth.uid()
     )
   );
 
@@ -153,6 +184,19 @@ CREATE POLICY events_insert_own ON public.competition_events
         join public.teams t on s.team_id = t.id
         where s.id = public.competition_events.session_id and t.auth_uid = auth.uid()
       )
+    )
+  );
+
+DROP POLICY IF EXISTS events_delete_own ON public.competition_events;
+CREATE POLICY events_delete_own ON public.competition_events
+  FOR DELETE USING (
+    team_id IN (
+      select t.id from public.teams t where t.auth_uid = auth.uid()
+    )
+    OR exists (
+      select 1 from public.competition_sessions s
+      join public.teams t on s.team_id = t.id
+      where s.id = public.competition_events.session_id and t.auth_uid = auth.uid()
     )
   );
 

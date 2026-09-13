@@ -103,10 +103,10 @@ export default function LiveStandingsTable({ teams, totalFiles, onTeamClick, sor
               <SortHeader label="TEAM NAME" column="team_name" />
               <SortHeader label="BATCH" column="batch" />
               <SortHeader label="SCORE" column="score" />
-              <SortHeader label="FILES UNLOCKED" column="files_unlocked" />
-              <SortHeader label="CURRENT FILE" column="current_file" />
+              <SortHeader label="CASES SOLVED" column="files_unlocked" />
+              <SortHeader label="CURRENT CASE" column="current_file" />
               <SortHeader label="TIME" column="time_remaining" />
-              <SortHeader label="LAST UNLOCKED" column="last_file_unlocked_at" />
+              <SortHeader label="LAST SOLVED" column="last_file_unlocked_at" />
               <SortHeader label="TAB SWITCHES" column="tab_switch_count" />
               <SortHeader label="STATUS" column="status" />
             </tr>

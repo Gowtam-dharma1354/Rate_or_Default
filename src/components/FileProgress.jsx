@@ -11,7 +11,7 @@ import "./FileProgress.css";
 export default function FileProgress({ currentFile, totalFiles, completedFiles }) {
   const renderProgressItems = () => {
     const items = [];
-    
+
     for (let i = 1; i <= totalFiles; i++) {
       let status = "locked";
       let symbol = "🔒";
@@ -25,7 +25,7 @@ export default function FileProgress({ currentFile, totalFiles, completedFiles }
       }
 
       items.push(
-        <div key={i} className={`progress-item progress-${status}`} title={`File ${i}`}>
+        <div key={i} className={`progress-item progress-${status}`} title={`Case ${i}`}>
           <span className="progress-symbol">{symbol}</span>
           <span className="progress-number">{String(i).padStart(2, "0")}</span>
         </div>
@@ -38,9 +38,9 @@ export default function FileProgress({ currentFile, totalFiles, completedFiles }
   return (
     <div className="file-progress">
       <div className="progress-header">
-        <h3 className="progress-title">FILE PROGRESS</h3>
+        <h3 className="progress-title">CASE PROGRESS</h3>
         <div className="progress-counter">
-          {currentFile - 1} / {totalFiles} FILES COMPLETED
+          {currentFile - 1} / {totalFiles} CASES COMPLETED
         </div>
       </div>
       <div className="progress-track">
