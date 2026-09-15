@@ -36,5 +36,5 @@ export const COMPETITION_CONFIG = {
 
   // Competition rules
   UNLIMITED_ATTEMPTS: true,
-  QUESTIONS_PER_FILE: 1
+  QUESTIONS_PER_FILE: 2
 };

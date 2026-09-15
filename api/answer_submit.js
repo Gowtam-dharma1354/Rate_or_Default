@@ -1,5 +1,5 @@
 import { createAdminSupabase } from './_supabaseAdmin.js';
-import { COMMON_FALCON_CASES } from '../src/data/questionPapers/common/falconCases.js';
+import { getQuestionPaper } from '../src/data/questionPaperSelector.js';
 
 const normalizeAnswer = (value) => {
   if (value === null || value === undefined) return '';
@@ -34,7 +34,7 @@ const checkAnswer = (userAnswer, canonicalAnswer, acceptedAnswers = []) => {
 };
 
 const getQuestionFromCase = ({ caseNumber, questionId, questionIndex }) => {
-  const targetCase = COMMON_FALCON_CASES.find((item) => item.caseNumber === Number(caseNumber));
+  const targetCase = getQuestionPaper(null, caseNumber);
   if (!targetCase) return null;
 
   if (questionId) {

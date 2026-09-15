@@ -84,14 +84,5 @@ const QUESTION_2 = {
   answer: "A"
 };
 
-export const COMMON_FALCON_CASES = Array.from({ length: 10 }, (_, index) => {
-  const caseNumber = index + 1;
+export default { id: "CASE_05", caseNumber: 5, caseTitle: "CASE 05", caseText: CASE_TEXT, questions: [QUESTION_1, QUESTION_2] };
 
-  return {
-    id: `CASE_${String(caseNumber).padStart(2, "0")}`,
-    caseNumber,
-    caseTitle: `CASE ${String(caseNumber).padStart(2, "0")}: PROJECT FALCON`,
-    caseText: CASE_TEXT,
-    questions: [QUESTION_1, QUESTION_2]
-  };
-});

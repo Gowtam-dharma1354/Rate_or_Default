@@ -48,7 +48,7 @@ export default function TaskCompletedPage({ totalFiles, teamName, batch, onResta
             ))}
           </div>
           <p className="completion-text">
-            {totalFiles} / {totalFiles} FILES UNLOCKED
+            {totalFiles} / {totalFiles} CASES SOLVED
           </p>
         </div>
 
