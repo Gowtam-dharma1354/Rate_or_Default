@@ -8,14 +8,10 @@ import { supabase } from "../lib/supabaseClient";
 import ClubBrand from "./ClubBrand";
 import AdminDashboard from "./Admin/AdminDashboard";
 import AdminTeamDetails from "./Admin/AdminTeamDetails";
+import { COMPETITION_CONFIG } from "../data/competitionConfig";
 import "./TeamLogin.css";
 
-const BATCH_OPTIONS = [
-  { value: "PGDM_1", label: "PGDM 1st Year" },
-  { value: "PGDM_2", label: "PGDM 2nd Year" },
-  { value: "PGPISM", label: "PGPISM" },
-  { value: "LLM", label: "LLM" }
-];
+const BATCH_OPTIONS = COMPETITION_CONFIG.BATCHES;
 
 const emptyMember = () => ({ name: "", email: "" });
 

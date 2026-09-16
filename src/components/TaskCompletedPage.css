@@ -151,6 +151,12 @@
   animation: scale-in 0.5s ease;
 }
 
+.completion-mark.is-unsolved {
+  background: transparent;
+  border-color: var(--border-color);
+  color: var(--text-light);
+}
+
 .completion-mark:nth-child(1) { animation-delay: 0s; }
 .completion-mark:nth-child(2) { animation-delay: 0.1s; }
 .completion-mark:nth-child(3) { animation-delay: 0.2s; }

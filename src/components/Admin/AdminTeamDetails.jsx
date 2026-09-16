@@ -150,8 +150,8 @@ export default function TeamDetails({ teamId, onClose }) {
         </div>
 
         <div className="info-card">
-          <div className="info-label">Score</div>
-          <div className="info-value score">{team.score || 0}</div>
+          <div className="info-label">Amount Earned</div>
+          <div className="info-value score">${Number(team.score ?? 0)}k</div>
         </div>
       </div>
 

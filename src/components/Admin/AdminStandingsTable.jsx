@@ -102,7 +102,7 @@ export default function LiveStandingsTable({ teams, totalFiles, onTeamClick, sor
               <SortHeader label="#" column="rank" />
               <SortHeader label="TEAM NAME" column="team_name" />
               <SortHeader label="BATCH" column="batch" />
-              <SortHeader label="SCORE" column="score" />
+              <SortHeader label="AMOUNT EARNED" column="score" />
               <SortHeader label="CASES SOLVED" column="files_unlocked" />
               <SortHeader label="CURRENT CASE" column="current_file" />
               <SortHeader label="TIME" column="time_remaining" />
@@ -139,7 +139,7 @@ export default function LiveStandingsTable({ teams, totalFiles, onTeamClick, sor
                   </td>
 
                   <td className="score-cell">
-                    <strong>{team.score || 0}</strong>
+                    <strong>${Number(team.score ?? 0)}k</strong>
                   </td>
 
                   <td className="files-cell">

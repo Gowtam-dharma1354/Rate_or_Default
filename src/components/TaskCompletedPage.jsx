@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import ClubBrand from "./ClubBrand";
 import "./TaskCompletedPage.css";
 
-export default function TaskCompletedPage({ totalFiles, teamName, batch, onRestart }) {
+export default function TaskCompletedPage({ totalFiles, completedFiles, teamName, batch, onRestart }) {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
@@ -44,11 +44,13 @@ export default function TaskCompletedPage({ totalFiles, teamName, batch, onResta
         <div className="completion-status">
           <div className="completion-marks">
             {Array.from({ length: totalFiles }, (_, i) => (
-              <span key={i} className="completion-mark">✓</span>
+              <span key={i} className={`completion-mark ${i < completedFiles ? "is-solved" : "is-unsolved"}`}>
+                {i < completedFiles ? "✓" : ""}
+              </span>
             ))}
           </div>
           <p className="completion-text">
-            {totalFiles} / {totalFiles} CASES SOLVED
+            {completedFiles} / {totalFiles} CASES SOLVED
           </p>
         </div>
 

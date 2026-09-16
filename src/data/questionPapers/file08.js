@@ -1,87 +1,108 @@
-const CASE_TEXT = `Company Profile
+const CASE_TEXT = `Company Profile 
+ 
+"Rocky BalBOA Materials" is a small manufacturing company producing specialised refractory material used for coating the inner surfaces of induction furnaces. 
+ 
+The company operates in the steel and allied-products ecosystem and benefits from an established customer base and promoters with considerable industry experience. 
+ 
+The company's business and financial profiles have been improving, supported by stronger profitability and a recent equity infusion. However, its relatively small scale and working-capital-intensive operations continue to constrain its credit profile. 
+ 
+Key Information 
+ 
+- The company has an established customer base in the steel and allied-products industry. 
+- Its promoters have considerable experience in the steel industry through their association with another group company. 
+- Total manufacturing capacity is approximately 72,000 tonnes per annum. 
+- The company remains relatively small in scale despite recent revenue growth. 
+ 
+Operating Performance 
+ 
+- Operating income increased to approximately ₹46 crore in fiscal 2016 from ₹38 crore in fiscal 2015. 
+- Operating income in fiscal 2016 was higher than the earlier expectation of approximately ₹44 crore. 
+- Operating income is expected to grow by approximately 8% in fiscal 2017. 
+- Operating margin improved to 10.4% in fiscal 2016 from 7.9% in fiscal 2015. 
+- The fiscal 2016 operating margin was also higher than the earlier expectation of 9.7%. 
+- Operating margin is expected to improve further to approximately 11.5% in fiscal 2017. 
+ 
+Financial Information (₹ Crore unless stated otherwise) 
+ 
+Particulars | FY2015 | FY2016 
+Operating Income | 38 | 46 
+Profit After Tax | 0.8 | 1.3 
+Operating Margin | 7.9% | 10.4% 
+Net Worth | — | 9 
+Total Outside Liabilities / Tangible Net Worth | — | 2.5x 
+ 
+Equity Infusion & Financial Risk Profile 
+ 
+- The company raised approximately ₹7.5 crore through an initial public offering in April 2016. 
+- The proceeds are intended to fund incremental working-capital requirements. 
+- Net worth is expected to increase to approximately ₹18 crore by 31 March 2017 from ₹9 crore as of 31 March 2016. 
+- Total outside liabilities to tangible net worth is expected to improve substantially to approximately 0.9x by 31 March 2017 from 2.5x a year earlier. 
+- The equity infusion is therefore expected to strengthen the company's financial risk profile. 
+ 
+Working Capital 
+ 
+- Operations remain working-capital intensive. 
+- Gross current assets ranged between approximately 128 and 192 days during the three years ended 31 March 2016. 
+- A significant stretch in the working-capital cycle could weaken the company's liquidity and financial risk profile. 
+ 
+Business Strengths 
+ 
+- Established customer relationships provide stability to the business. 
+- Promoters have extensive experience in the steel and allied-products industry. 
+- Operating profitability has shown meaningful improvement. 
+- Fresh equity infusion is expected to strengthen the capital structure. 
+ 
+Business Risks 
+ 
+- The company's scale of operations remains modest, with operating income of only approximately ₹46 crore in fiscal 2016. 
+- Operations require substantial working capital. 
+- Lower-than-expected profitability or turnover could weaken cash accruals. 
+- A stretch in the working-capital cycle could adversely affect liquidity. 
+- Debt-funded capital expenditure could weaken the financial risk profile. 
+ 
+Decision Date: 30 January 2017`;
 
-Falcon Electronics Ltd. manufactures consumer electronics and home appliances in India.
-
-The company has grown rapidly over the last three years, mainly because of strong demand for its premium products.
-
-However, the company recently invested heavily in a new manufacturing facility and has taken additional debt to fund the expansion.
-
-Key information
-
-- Revenue has grown consistently for 3 years.
-- The company has a strong position in the premium segment.
-- Competition is increasing from larger players.
-- The new manufacturing facility is expected to become operational next year.
-- Management expects revenue growth of 15–20% over the next two years.
-- The company has no history of default.
-
-Financial Information (₹ Crore)
-
-Particulars | FY23 | FY24 | FY25
-Revenue | 1,000 | 1,180 | 1,350
-EBITDA | 150 | 165 | 175
-PAT | 72 | 78 | 80
-Cash Flow from Operations | 120 | 105 | 85
-Total Debt | 400 | 520 | 680
-Cash & Bank Balance | 100 | 90 | 75
-Interest Expense | 35 | 45 | 62
-
-Debt Maturity
-
-- FY26: ₹100 Cr
-- FY27: ₹250 Cr
-- FY28: ₹180 Cr
-- After FY28: ₹150 Cr
-
-Peer Comparison
-
-Metric | Falcon | Peer Average
-Revenue Growth | 14% | 10%
-EBITDA Margin | 13.0% | 14.5%
-Debt / EBITDA | 3.9x | 2.5x
-Interest Coverage | 2.8x | 4.0x
-CFO / Debt | 12.5% | 20%`;
-
-const QUESTION_1 = {
-  id: "Q1",
-  prompt:
-    "# QUESTION 1 — RATE THE COMPANY\n\nBased on the information available as of 31 March 2025, what credit rating would you assign to Falcon Electronics Ltd.?\n\nSelect ONE:",
-  options: [
-    { label: "A", value: "A", text: "A+" },
-    { label: "B", value: "B", text: "A" },
-    { label: "C", value: "C", text: "BBB" },
-    { label: "D", value: "D", text: "BB" }
-  ],
-  answer: "C"
+const QUESTION_1 = { 
+  id: "Q1", 
+  prompt: 
+    "# QUESTION 1 — ASSIGN A RATING\n\nBased ONLY on the information available as of 30 January 2017, what rating would you assign to Rocky BalBOA Materials' long-term bank facilities?\n\nSelect ONE:", 
+  options: [ 
+    { label: "A", value: "A", text: "BB+" }, 
+    { label: "B", value: "B", text: "BBB-" }, 
+    { label: "C", value: "C", text: "BB" }, 
+    { label: "D", value: "D", text: "B+" } 
+  ], 
+  answer: "A" 
+}; 
+ 
+const QUESTION_2 = { 
+  id: "Q2", 
+  prompt: 
+    "# QUESTION 2 — CHOOSE YOUR RATIONALE\n\nYou have selected your rating. Which of the following BEST supports your rating decision?\n\nSelect ONE:", 
+  options: [ 
+    { 
+      label: "A", 
+      value: "A", 
+      text: "The company's improving profitability, experienced promoters and ₹7.5 crore equity infusion have substantially strengthened its financial profile. With leverage expected to decline sharply, these improvements are sufficient to move the company into the investment-grade BBB category." 
+    }, 
+    { 
+      label: "B", 
+      value: "B", 
+      text: "The company's established customer base, experienced promoters, improving operating margins and fresh equity infusion support an improving credit profile. However, its modest scale of operations and working-capital-intensive business continue to constrain the rating, supporting a BB+ assessment." 
+    }, 
+    { 
+      label: "C", 
+      value: "C", 
+      text: "The company's small scale and working-capital requirements outweigh the improvement in profitability and capital structure. Since gross current assets have remained as high as 192 days, the financial risk profile has not improved sufficiently to justify any rating upgrade." 
+    }, 
+    { 
+      label: "D", 
+      value: "D", 
+      text: "The company's operating income remains only ₹46 crore and its business depends heavily on the steel industry. Its modest scale and working-capital intensity create substantial default risk, making a B+ rating the most appropriate despite the recent equity infusion." 
+    } 
+  ], 
+  answer: "B" 
 };
 
-const QUESTION_2 = {
-  id: "Q2",
-  prompt:
-    "# QUESTION 2 — RATIONALE FOR YOUR RATING\n\nYou have assigned Falcon Electronics Ltd. a credit rating based on the information available as of 31 March 2025. Which of the following is the best rationale for that rating?\n\nSelect ONE:",
-  options: [
-    {
-      label: "A",
-      value: "A",
-      text: "Strong revenue growth and a premium market position support the rating, but rising leverage and weaker cash generation prevent a stronger rating."
-    },
-    {
-      label: "B",
-      value: "B",
-      text: "The company has no history of default, so its rating should be A regardless of leverage and cash flow trends."
-    },
-    {
-      label: "C",
-      value: "C",
-      text: "The company is a large player with very strong cash generation, so the rating should be A+."
-    },
-    {
-      label: "D",
-      value: "D",
-      text: "The company’s debt is low and interest coverage is high, so the rating should be BBB."
-    }
-  ],
-  answer: "A"
-};
 
 export default { id: "CASE_08", caseNumber: 8, caseTitle: "CASE 08", caseText: CASE_TEXT, questions: [QUESTION_1, QUESTION_2] };

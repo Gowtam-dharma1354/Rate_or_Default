@@ -63,6 +63,7 @@ export default function FilterBar({ onFilterChange, totalTeams, totalFiles }) {
             <option value="PGDM 2nd Year">PGDM 2nd Year</option>
             <option value="PGPISM">PGPISM</option>
             <option value="LLM">LLM</option>
+            <option value="PGCSM">PGCSM</option>
           </select>
         </div>
 

@@ -136,6 +136,7 @@ function PlayerExperience() {
   const [currentScreen, setCurrentScreen] = useState(savedState?.currentScreen || SCREEN_STATES.OPENING);
   const [teamData, setTeamData] = useState(savedState?.teamData || null);
   const [currentFile, setCurrentFile] = useState(savedState?.currentFile || 1);
+  const [completedFiles, setCompletedFiles] = useState(savedState?.completedFiles || 0);
   const [timerStartTime, setTimerStartTime] = useState(savedState?.timerStartTime || null);
   const [fullscreenViolationCount, setFullscreenViolationCount] = useState(savedState?.fullscreenViolationCount || 0);
   const [currentQuestion, setCurrentQuestion] = useState(null);
@@ -153,10 +154,11 @@ function PlayerExperience() {
       currentScreen,
       teamData,
       currentFile,
+      completedFiles,
       timerStartTime,
       fullscreenViolationCount
     });
-  }, [currentScreen, teamData, currentFile, timerStartTime, fullscreenViolationCount]);
+  }, [currentScreen, teamData, currentFile, completedFiles, timerStartTime, fullscreenViolationCount]);
 
   useEffect(() => {
     if (teamData?.batch && currentScreen === SCREEN_STATES.COMPETITION && !currentQuestion) {
@@ -408,14 +410,7 @@ function PlayerExperience() {
   };
 
   const createCompetitionSession = async (teamInfo) => {
-    const { data: settingsRow } = await supabase
-      .from("competition_settings")
-      .select("duration_seconds")
-      .order("created_at", { ascending: false })
-      .limit(1)
-      .maybeSingle();
-
-    const durationSeconds = settingsRow?.duration_seconds ?? COMPETITION_CONFIG.TIMER_DURATION_SECONDS;
+    const durationSeconds = COMPETITION_CONFIG.TIMER_DURATION_SECONDS;
     const now = new Date();
     const startedAt = now.toISOString();
     const expiresAt = new Date(now.getTime() + durationSeconds * 1000).toISOString();
@@ -472,6 +467,7 @@ function PlayerExperience() {
 
       setTeamData(nextTeamData);
       setCurrentFile(1);
+      setCompletedFiles(0);
       setTimerStartTime(Date.now());
       setFullscreenViolationCount(0);
       setCurrentQuestion(loadQuestion(teamInfo.batch, 1));
@@ -482,6 +478,7 @@ function PlayerExperience() {
       const fallbackTeamData = { ...teamInfo, sessionId: teamInfo.sessionId, teamId: teamInfo.teamId };
       setTeamData(fallbackTeamData);
       setCurrentFile(1);
+      setCompletedFiles(0);
       setFullscreenViolationCount(0);
       setCurrentQuestion(loadQuestion(teamInfo.batch, 1));
       setCurrentScreen(SCREEN_STATES.COMPETITION);
@@ -491,6 +488,9 @@ function PlayerExperience() {
 
   const handleAnswerCorrect = async (attemptNumber) => {
     const nextScore = Number(teamData?.score || 0) + getFileScore(currentFile);
+    const nextCompletedFiles = Math.min(totalFiles, completedFiles + 1);
+
+    setCompletedFiles(nextCompletedFiles);
 
     if (teamData?.sessionId && teamData?.teamId) {
       const elapsedSeconds = timerStartTime ? Math.max(0, Math.round((Date.now() - timerStartTime) / 1000)) : 0;
@@ -555,6 +555,30 @@ function PlayerExperience() {
     }
   };
 
+  const handleTimeUp = async () => {
+    if (currentScreen !== SCREEN_STATES.COMPETITION || !teamData?.sessionId) return;
+
+    try {
+      await supabase
+        .from("competition_sessions")
+        .update({
+          status: "COMPLETED",
+          current_level: currentFile,
+          completed_at: new Date().toISOString()
+        })
+        .eq("id", teamData.sessionId);
+    } catch (error) {
+      console.error("Unable to auto-submit expired competition:", error);
+    }
+
+    setCurrentScreen(SCREEN_STATES.COMPLETED);
+    setShowFullscreenWarning(false);
+    setFullscreenMessage("");
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+  };
+
   const handleSelectTeam = () => {
     setCurrentScreen(SCREEN_STATES.TEAM_LOGIN);
   };
@@ -568,6 +592,7 @@ function PlayerExperience() {
   const handleRestart = () => {
     setTeamData(null);
     setCurrentFile(1);
+    setCompletedFiles(0);
     setTimerStartTime(null);
     setFullscreenViolationCount(0);
     setCurrentQuestion(null);
@@ -620,6 +645,7 @@ function PlayerExperience() {
             totalFiles={totalFiles}
             question={currentQuestion}
             onAnswerCorrect={handleAnswerCorrect}
+            onTimeUp={handleTimeUp}
             timerStartTime={timerStartTime}
             fullscreenViolationCount={fullscreenViolationCount}
             sessionId={teamData?.sessionId}
@@ -671,6 +697,7 @@ function PlayerExperience() {
         <div className="scanlines" />
         <TaskCompletedPage
           totalFiles={totalFiles}
+          completedFiles={completedFiles}
           teamName={teamData?.teamName}
           batch={teamData?.batch}
           onRestart={handleRestart}

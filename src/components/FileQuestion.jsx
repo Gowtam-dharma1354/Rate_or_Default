@@ -9,6 +9,7 @@ import CompetitionTimer from "./CompetitionTimer";
 import FileProgress from "./FileProgress";
 import { postAnswerSubmit } from "../lib/api";
 import { supabase } from "../lib/supabaseClient";
+import { COMPETITION_CONFIG } from "../data/competitionConfig";
 import "./FileQuestion.css";
 
 const padFileNumber = (num) => String(num).padStart(2, "0");
@@ -18,6 +19,7 @@ export default function FileQuestion({
   totalFiles,
   question,
   onAnswerCorrect,
+  onTimeUp,
   timerStartTime,
   fullscreenViolationCount = 0,
   sessionId,
@@ -101,6 +103,8 @@ export default function FileQuestion({
           </div>
           <CompetitionTimer
             timerStartTime={timerStartTime}
+            durationSeconds={COMPETITION_CONFIG.TIMER_DURATION_SECONDS}
+            onTimeUp={onTimeUp}
             fullscreenViolationCount={fullscreenViolationCount}
           />
         </div>
