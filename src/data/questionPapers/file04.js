@@ -1,30 +1,30 @@
 const CASE_TEXT = `Company Profile 
  
-The company is one of India's leading mobile service providers, operating across all 22 service areas in the country. Following a major merger, it has emerged as one of the country's significant telecom operators. 
+"The Company" is one of India's leading mobile service providers, operating across all 22 telecom service areas in the country. 
  
-The company has a strong market position, but the telecom industry has been under severe competitive pressure. The company has also experienced significant subscriber losses and weakening operating performance. 
+Following a major merger, the company has emerged as one of the significant mobile operators in India. It has a substantial subscriber base, extensive spectrum holdings and a nationwide network. 
  
-At the same time, the company has strong financial backing from two major sponsors and has recently raised substantial equity. 
+The company has strong financial backing from two major sponsors and has previously received substantial equity support. However, its operating performance remains weak and the telecom industry continues to face intense competitive and regulatory pressure. 
  
-The company is now facing an additional risk from a major regulatory dispute that could result in a large cash outflow. 
+The company is also facing a major financial challenge arising from a disputed regulatory liability, which could significantly affect its liquidity and solvency. 
  
 Key Information 
  
-- Gross revenue market share was approximately 29.4% in the quarter ended June 2019. 
-- Subscriber market share was approximately 32% as of August 2019. 
-- The company holds approximately 1,850 MHz of spectrum, of which around 1,715 MHz can be used for 2G, 3G, 4G or 5G technology. 
-- The company operates across all 22 telecom circles in India. 
-- More than 70% of the group's spectrum has validity extending to 2034–2036. 
-- Network integration had been completed in 10 circles by June 2019, accounting for more than 50% of 4G revenue. 
+- Gross revenue market share was approximately 29.4% as of June 2019. 
+- Subscriber market share was approximately 31.7% as of September 2019. 
+- The company holds approximately 1,850 MHz of spectrum. 
+- Approximately 1,715 MHz of the spectrum can be utilised for 2G, 3G, 4G or 5G technology. 
+- The company provides wireless voice and broadband services across all 22 telecom circles in India. 
+- Network integration had been completed in 14 circles as of September 2019. 
  
 Operating Performance 
  
-- The company lost approximately 66.6 million subscribers during the 12 months ended August 2019. 
-- Average revenue per user (ARPU) improved from ₹88 in September 2018 to ₹108 in June 2019. 
-- Despite the improvement in ARPU, subscriber losses continued to put pressure on performance. 
-- EBITDA declined by approximately ₹350 crore quarter-on-quarter in the first quarter of fiscal 2020. 
-- Revenue and operating profit were lower by approximately ₹500 crore and ₹340 crore, respectively, during the first quarter of fiscal 2020. 
-- Net loss was ₹4,874 crore on revenue of ₹11,270 crore in the quarter ended June 2019. 
+- The company lost more than 11 crore subscribers during the 12 months ended September 2019. 
+- Average revenue per user (ARPU) increased from ₹88 in September 2018 to ₹108 in June 2019, but subsequently declined marginally to ₹107 in September 2019. 
+- EBITDA declined to approximately ₹1,050 crore in the second quarter of fiscal 2020 from ₹1,250 crore in the previous quarter. 
+- Revenue and operating profit declined by approximately ₹426 crore and ₹200 crore, respectively, during the quarter ended September 2019 compared with the previous quarter. 
+- Continued subscriber losses have offset the benefits of higher ARPU and merger-related synergies. 
+- The company announced a tariff increase beginning December 2019, although the quantum of the increase remained uncertain as of the decision date. 
  
 Financial Information (₹ Crore unless stated otherwise) 
  
@@ -35,51 +35,75 @@ PAT Margin | -19.4% | -27.4%
 Debt / EBITDA | 10.3x | 23.1x 
 Adjusted Interest Coverage | 1.25x | 0.49x 
  
+AGR-related Liability 
+ 
+- The company had recognised a total provision of approximately ₹44,150 crore for the disputed AGR-related liability up to September 2019. 
+- This included approximately ₹27,610 crore towards licence fees and ₹16,540 crore towards spectrum usage charges. 
+- Existing liquidity of approximately ₹15,390 crore was insufficient to meet the licence-fee liability of ₹27,610 crore if required to be paid. 
+- The Supreme Court had directed telecom operators to comply with the judgement within three months. 
+- The Department of Telecommunications subsequently issued a demand notice requiring operators to carry out self-assessment and make payments. 
+- The company and other telecom operators were seeking relief from the government, including extended payment terms and waiver of interest and penalties. 
+- The final quantum, payment schedule and possible government relief remained uncertain as of the decision date. 
+ 
 Liquidity 
  
-- Liquid surplus stood at approximately ₹21,180 crore as of June 30, 2019. 
-- Principal repayments of approximately ₹4,200 crore were due during the nine months ending March 31, 2020. 
-- Planned capex was approximately ₹13,000 crore during the same period. 
-- Liquidity was also expected to be supported by planned asset monetisation and a lean working-capital cycle. 
-- However, the emerging regulatory liability could materially affect liquidity if payment is required in the short term. 
+- Cash and cash equivalents stood at approximately ₹15,390 crore as of September 2019. 
+- Deferred spectrum repayment of approximately ₹5,630 crore was due during the second half of fiscal 2020. 
+- External debt repayment of approximately ₹945 crore was also due during the same period. 
+- Any payment towards the AGR liability could significantly weaken liquidity. 
+- Delay in planned asset monetisation could further stretch liquidity. 
+- Accelerated debt repayment triggered by a breach of debt covenants could create additional pressure. 
+- Given the weak operating performance, the company's ability to raise fresh debt remained limited. 
  
 Sponsor Support 
  
 - The company is backed by two strong sponsors with equal management control. 
+- Vodafone Group Plc and the Aditya Birla Group are the principal sponsors. 
 - The company successfully raised ₹25,000 crore of equity in May 2019. 
-- One sponsor contributed ₹11,000 crore and the other contributed ₹6,920 crore. 
-- The sponsors had also provided substantial equity support before the completion of the merger. 
-- Continued sponsor support provides some financial flexibility. 
+- Vodafone contributed approximately ₹11,000 crore and Aditya Birla Group contributed approximately ₹6,920 crore. 
+- Before completion of the merger, Vodafone had contributed approximately ₹8,600 crore and Aditya Birla Group had contributed approximately ₹3,250 crore to the respective businesses. 
+- Strong sponsors provide some financial flexibility. 
+- Continued and timely sponsor support remains important if the AGR-related liability materialises. 
  
-Regulatory Risk 
- 
-- The Supreme Court upheld the Department of Telecommunications' definition of Adjusted Gross Revenue (AGR). 
-- The ruling could result in a significant financial liability for the company. 
-- Based on the demand raised by the Department of Telecommunications during the proceedings, the company may be required to pay approximately ₹28,309 crore, including licence fees, interest, penalty and interest on penalty. 
-- The exact liability and payment terms were still unclear as of the decision date. 
-- Telecom operators were considering options including a review petition and discussions with the government regarding payment terms and possible relief. 
- 
-Industry Risk 
+Industry Risks 
  
 - The domestic telecom industry has experienced intense price competition. 
-- The entry of a major new telecom operator triggered a price war and pressured industry revenues. 
+- The entry of a major new telecom operator triggered a significant price war and reduced industry revenues. 
 - Lower call termination charges have also constrained profitability. 
-- The industry remains exposed to technological changes requiring significant network investment. 
-- Regulatory changes could materially affect profitability. 
+- The telecom industry is highly regulated and vulnerable to changes in government policy. 
+- Technological changes require continued investment in network infrastructure. 
+- Further reductions in interconnect usage charges could adversely affect profitability. 
+- The company earns significant revenue from interconnect usage charges, making regulatory changes particularly relevant to its financial profile. 
  
-Decision Date: 1 November 2019`;
+Positive Factors 
+ 
+- Established market position in India's mobile telephone industry. 
+- Nationwide presence across all 22 service areas. 
+- Large spectrum holdings provide technological flexibility. 
+- Strong financial support from two major sponsors. 
+- Significant equity infusion of ₹25,000 crore in May 2019. 
+- Government had granted a two-year moratorium on deferred spectrum payments. 
+- Potential government relief on AGR-related dues could materially improve the company's financial position. 
+ 
+Decision Considerations 
+ 
+The company's established market position and strong sponsors provide important credit strengths. However, these are significantly offset by continued subscriber losses, weak operating performance, very high leverage, weak interest coverage, stretched liquidity and the potentially large AGR-related cash outflow. 
+ 
+Previous rating:- BBB+ 
+ 
+Decision Date: 22 November 2019`;
 
 const QUESTION_1 = { 
   id: "Q1", 
   prompt: 
-    "# QUESTION 1 — ASSIGN A RATING\n\nBased ONLY on the information available as of 1 November 2019, what rating would you assign to the company's long-term debt instruments?\n\nSelect ONE:", 
+    "# QUESTION 1 — ASSIGN A RATING\n\nBased ONLY on the information available as of 22 November 2019, what credit rating would you assign to The Company's long-term debt instruments?\n\nSelect ONE:", 
   options: [ 
-    { label: "A", value: "A", text: "A" }, 
-    { label: "B", value: "B", text: "A-" }, 
+    { label: "A", value: "A", text: "BBB-" }, 
+    { label: "B", value: "B", text: "BB+" }, 
     { label: "C", value: "C", text: "BBB" }, 
-    { label: "D", value: "D", text: "BBB+" } 
+    { label: "D", value: "D", text: "A-" } 
   ], 
-  answer: "D" 
+  answer: "A" 
 }; 
  
 const QUESTION_2 = { 
@@ -90,27 +114,27 @@ const QUESTION_2 = {
     { 
       label: "A", 
       value: "A", 
-      text: "The company's established market position and strong sponsor support provide important credit strengths, while its large spectrum holdings and liquidity offer some financial flexibility. However, continued weak operating performance, very high leverage, weak interest coverage and significant regulatory uncertainty constrain the rating." 
-      
+      text: "The company's nationwide network, substantial spectrum holdings and strong sponsors provide sufficient financial flexibility to offset its weak operating performance. The ₹25,000 crore equity infusion and the two-year spectrum payment moratorium indicate that the company should retain its previous rating." 
     }, 
     { 
       label: "B", 
       value: "B", 
-      text: "The company's debt-to-EBITDA ratio of 23.1x and interest coverage of only 0.49x indicate extremely weak debt protection. Combined with continuing losses and subscriber decline, these factors warrant a rating below the investment-grade category regardless of sponsor support." 
+      text: "The company has lost more than 11 crore subscribers and has debt-to-EBITDA of 23.1x with interest coverage of only 0.49x. Since its operating performance is weak and liquidity is insufficient to cover the AGR liability, the company's rating should fall below investment grade." 
     }, 
     { 
       label: "C", 
       value: "C", 
-      text: "The company's established market position, large spectrum holdings and strong sponsors provide sufficient comfort to offset its weak operating performance, high leverage and regulatory risks. Therefore, the company should retain a rating in the A category." 
+      text: "The company's established market position, strong sponsors and large spectrum holdings provide meaningful credit strengths. However, continued subscriber losses, weak operating performance, extremely high leverage, weak debt protection and the potentially large AGR-related cash outflow materially weaken its financial risk profile." 
     }, 
     { 
       label: "D", 
       value: "D", 
-      text: "The company's liquidity position is comfortable and its sponsors have demonstrated their willingness to provide substantial equity support. Since the regulatory liability is still uncertain, the potential ₹28,309 crore payment should not materially influence the current rating." 
+      text: "The ₹15,390 crore liquidity position and strong sponsor backing provide adequate protection against the company's obligations. Since the AGR liability remains disputed and the government is considering relief measures, it should not materially affect the current rating." 
     } 
   ], 
-  answer: "A" 
+  answer: "C" 
 };
+
 
 
 export default { id: "CASE_04", caseNumber: 4, caseTitle: "CASE 04", caseText: CASE_TEXT, questions: [QUESTION_1, QUESTION_2] };

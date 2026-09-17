@@ -1,88 +1,123 @@
 const CASE_TEXT = `Company Profile 
  
-"MetalMosaic" is a large diversified natural resources group with operations spanning zinc, lead, silver, aluminium, oil and gas, iron ore, power and steel. 
+"MetalMosaic" is a large diversified natural resources group with operations across zinc, lead, silver, aluminium, oil and gas, iron ore, power and steel. 
  
-The group is among the larger producers across several of these commodities and has a strong market position in India. Its diversified portfolio provides some protection against weakness in any single commodity. 
+The company has a strong market position across several of its key businesses and benefits from diversification across commodities. Its domestic zinc and oil and gas businesses have relatively low operating costs, while profitability in the aluminium business has improved because of lower input costs and better operating efficiency. 
  
-However, the group is operating with relatively high leverage and has significant financial obligations. A key concern is the financial position of its parent company, which may require continued financial support from the group. 
- 
-At the same time, improving production volumes, cost efficiencies and stronger commodity prices are expected to support profitability. 
+However, the company continues to carry high financial leverage. Large capital expenditure requirements and dividend payouts to support its parent company also result in significant cash outflows. 
  
 Key Information 
  
-- The group has a diversified presence across zinc, lead, silver, aluminium, oil and gas, iron ore, power and steel. 
-- It has strong market positions across several of its businesses. 
+- The company is among the largest producers in India across several commodity segments. 
+- Diversification across zinc, lead, silver, aluminium, oil and gas, iron ore, power and steel reduces dependence on any single commodity. 
 - Domestic zinc, lead and silver operations benefit from low production costs and large reserves. 
-- Aluminium profitability has improved because of better coal sourcing, lower coal prices and lower imported alumina costs. 
-- Production volumes in zinc and oil and gas are expected to improve over the medium term. 
-- Commodity prices remain an important source of earnings volatility. 
+- The oil and gas business benefits from relatively low operating costs. 
+- Production volumes across major businesses have remained stable. 
+- Recovery in commodity prices has supported improvement in operating performance. 
+ 
+Operating Performance 
+ 
+- EBITDA is expected to increase to more than ₹26,000 crore in FY2021. 
+- EBITDA is expected to rise further to more than ₹30,000 crore in FY2022. 
+- During the first nine months of FY2021, revenue was approximately ₹59,815 crore. 
+- EBITDA during the first nine months of FY2021 was approximately ₹18,234 crore. 
+- PAT during the first nine months of FY2021 was approximately ₹7,403 crore. 
+- During the corresponding period of the previous year, revenue, EBITDA and PAT were approximately ₹64,692 crore, ₹16,216 crore and ₹7,338 crore, respectively. 
+- Improved efficiency in the aluminium business and recovery in commodity prices are supporting profitability. 
  
 Financial Information (₹ Crore unless stated otherwise) 
  
 Particulars | FY2019 | FY2020 
 Operating Income | 93,660 | 86,380 
-PAT | 9,698 | Negative* 
+Profit After Tax | 9,698 | Negative* 
 PAT Margin | 10.4% | Negative 
 Adjusted Debt / Adjusted Net Worth | 1.55x | 1.67x 
 Interest Coverage | 5.48x | 4.53x 
  
-*FY2020 PAT was negative due in part to a non-cash exceptional expense arising from impairment of assets. 
+*FY2020 PAT includes a non-cash exceptional expense arising from impairment of assets. 
  
-Leverage & Cash Flow 
+Leverage & Capital Allocation 
  
-- Net leverage was approximately 3.8x as of 31 March 2020. 
-- Net leverage was expected to remain above 3.2x in FY2021. 
-- Net leverage was expected to gradually improve to around 2.8x in the following fiscal year. 
-- Annual capex was expected to be approximately ₹6,000–7,000 crore in FY2021. 
-- Higher dividends to the parent could result in additional cash outflow. 
-- Profitability remains exposed to fluctuations in metal and oil prices. 
+- Net financial leverage was approximately 3.8x as of 31 March 2020. 
+- Net financial leverage is expected to remain above 3.2x as of 31 March 2021. 
+- Improvement in EBITDA could gradually reduce net leverage to approximately 2.8x in the following fiscal year. 
+- Annual capital expenditure of approximately ₹6,000-7,000 crore is expected in FY2021. 
+- Capital expenditure was approximately ₹9,000 crore in FY2020. 
+- Large dividend payouts to the parent company continue to create significant cash outflows. 
+- Additional investments, acquisitions or higher-than-expected support to the parent could delay deleveraging. 
  
-Parent Company Risk 
+Parent Company & Refinancing 
  
-- The group is held 50.1% by its parent company, "NorthStar Holdings". 
-- The parent company had approximately US$7.3 billion of debt as of 30 June 2020. 
-- The parent had debt maturities of approximately US$1 billion in FY2021. 
-- The group had already extended approximately US$300 million of inter-corporate loans to the parent as of 30 June 2020. 
-- Dividends from the group are an important source of funds for servicing the parent's interest obligations. 
-- Continued refinancing difficulties at the parent could result in higher dividends or additional loans from the group, weakening the group's financial risk profile. 
+- The parent company had approximately USD 7 billion of debt as of 31 December 2020. 
+- Although creditors of the parent do not have direct legal recourse to MetalMosaic, the parent's debt is partly serviced using dividends received from the company. 
+- Inter-corporate loans of approximately USD 956 million and interim dividends from the company helped the parent meet debt obligations until December 2020. 
+- The parent raised approximately USD 1 billion through bonds in December 2020. 
+- This enabled repayment of debt obligations through March 2021 and provided adequate liquidity to service debt through June 2021. 
+- Timely refinancing of the parent's remaining debt after June 2021 remains an important monitorable. 
+ 
+Promoter Developments 
+ 
+- Promoters increased their stake in the company by approximately 5 percentage points to 55% in December 2020. 
+- The increase was supported by approximately USD 400 million of additional debt. 
+- Promoters subsequently announced a voluntary open offer to acquire an additional 10% stake. 
+- A successful increase in promoter ownership could reduce dividend leakage and improve financial flexibility over the medium to long term. 
+- However, additional borrowing used to finance the transaction could increase group leverage. 
  
 Liquidity 
  
-- Cash balance was approximately ₹31,470 crore as of 30 June 2020, net of the inter-corporate loan to the parent. 
-- Unutilised bank limits stood at approximately ₹9,469 crore. 
-- Term debt obligations were expected at approximately ₹3,000 crore in the second half of FY2021 and ₹12,854 crore during FY2022. 
-- Cash accrual before dividends was expected at approximately ₹18,000 crore in FY2021 and more than ₹20,000 crore in FY2022. 
-- The group has a strong track record of refinancing its debt. 
-- Flexibility in capex provides additional support to liquidity. 
+- Cash balance stood at approximately ₹27,055 crore as of 31 December 2020, after adjusting for inter-corporate loans to the parent. 
+- The company also had approximately ₹9,500 crore of unutilised bank limits as of June 2020. 
+- Term debt obligations are approximately ₹1,800 crore in the last quarter of FY2021. 
+- Term debt obligations are approximately ₹14,300 crore during FY2022. 
+- Cash accrual before dividends is expected to exceed ₹18,000 crore in FY2021. 
+- Cash accrual before dividends is expected to exceed ₹20,000 crore in FY2022. 
+- The company has flexibility to adjust capital expenditure if required. 
+- The company also has a strong track record of refinancing debt. 
  
-Operating Outlook 
+Business Strengths 
  
-- EBITDA for FY2021 was expected to improve to above ₹24,000 crore. 
-- EBITDA was expected to increase to approximately ₹30,000 crore in the following fiscal year. 
-- Higher production in zinc and oil & gas, sustained aluminium cost efficiencies and improved commodity prices were expected to support profitability. 
-- Stronger profitability could improve the parent's ability to refinance its debt. 
+- Diversified presence across several commodities. 
+- Large scale of operations and strong market position. 
+- Low-cost domestic zinc, lead and silver operations. 
+- Relatively low operating costs in the oil and gas business. 
+- Improving aluminium profitability due to lower coal and alumina costs. 
+- Expected volume growth in zinc and oil and gas businesses. 
+- Recovery in commodity prices supporting earnings. 
+- Strong liquidity and substantial cash accrual. 
  
-Industry & Regulatory Risks 
+Key Risks 
  
-- The group's businesses are exposed to volatility in commodity prices. 
-- Mining and natural-resource businesses are exposed to regulatory risks. 
-- A major copper smelting facility had remained closed following regulatory action. 
-- Suspension of iron ore mining operations in certain regions had previously affected the group's performance. 
-- Any adverse regulatory outcome affecting the oil and gas business could reduce profitability. 
+- Financial leverage remains high. 
+- Large dividend payouts create substantial cash leakage. 
+- Significant annual capital expenditure requirements constrain free cash flow. 
+- Earnings remain susceptible to fluctuations in metal, oil and gas prices. 
+- Parent-company refinancing requirements could create additional financial pressure. 
+- The company operates in industries exposed to significant regulatory risks. 
+- The copper smelting plant at Thoothukkudi remains closed following regulatory action. 
+- Iron ore operations have previously been affected by regulatory restrictions. 
+- Adverse regulatory outcomes in the oil and gas business could affect profitability. 
  
-Decision Date: 28 October 2020`;
+Rating Considerations 
+ 
+MetalMosaic benefits from a strong and diversified business profile, large scale of operations, low-cost positions in key businesses, improving aluminium profitability and strong liquidity. Operating profitability is also expected to improve significantly because of better commodity prices and operating efficiencies. 
+ 
+However, these strengths are partly offset by high leverage, substantial capital expenditure, large dividend payouts, exposure to commodity-price volatility and regulatory risks. The financial requirements of the parent company and the need for timely refinancing at the parent level also remain important monitorables. 
+ 
+Previous rating:- AA- 
+ 
+Decision Date: 8 February 2021`;
 
 const QUESTION_1 = { 
   id: "Q1", 
   prompt: 
-    "# QUESTION 1 — ASSIGN A RATING\n\nBased ONLY on the information available as of 28 October 2020, what rating would you assign to MetalMosaic's long-term debt instruments?\n\nSelect ONE:", 
+    "# QUESTION 1 — ASSIGN A RATING\n\nBased ONLY on the information available as of 8 February 2021, what credit rating would you assign to MetalMosaic's long-term debt instruments?\n\nSelect ONE:", 
   options: [ 
-    { label: "A", value: "A", text: "AA-" }, 
+    { label: "A", value: "A", text: "A+" }, 
     { label: "B", value: "B", text: "AA" }, 
-    { label: "C", value: "C", text: "AA+" }, 
-    { label: "D", value: "D", text: "A+" } 
+    { label: "C", value: "C", text: "AA-" }, 
+    { label: "D", value: "D", text: "A" } 
   ], 
-  answer: "A" 
+  answer: "C" 
 }; 
  
 const QUESTION_2 = { 
@@ -93,26 +128,27 @@ const QUESTION_2 = {
     { 
       label: "A", 
       value: "A", 
-      text: "The group's diversified operations, strong market positions, large liquidity surplus and expected improvement in EBITDA provide enough financial strength to justify an AA+ rating, despite the parent's debt obligations." 
+      text: "The company's strong liquidity, diversified commodity portfolio and expected EBITDA above ₹30,000 crore indicate that financial risk has reduced substantially. The strong cash balance and refinancing track record outweigh the risks from leverage and parent-company obligations, supporting an upgrade." 
     }, 
     { 
       label: "B", 
       value: "B", 
-      text: "The group's high leverage, substantial capex requirements and exposure to commodity-price volatility indicate that its credit profile is weak. The parent company's debt obligations further increase the risk, making an investment-grade rating inappropriate." 
+      text: "High leverage, large capital expenditure and substantial dividend payouts materially weaken the company's financial position. The parent's refinancing requirements create additional risk significant enough to warrant a downgrade despite improvement in operating profitability." 
     }, 
     { 
       label: "C", 
       value: "C", 
-      text: "The group's diversified businesses, low-cost operations, strong market positions, improving profitability and strong liquidity support a high credit profile. However, elevated leverage, significant capex and dividend or inter-corporate loan support to the highly leveraged parent constrain the rating." 
+      text: "Although operating performance is improving, the company's exposure to commodity-price volatility and regulatory risks makes its diversified business profile insufficient to support the current rating, particularly given the negative PAT reported in FY2020." 
     }, 
     { 
       label: "D", 
       value: "D", 
-      text: "The group's ₹31,470 crore cash balance and ₹9,469 crore of unutilised bank limits provide more than enough liquidity to cover all foreseeable obligations. Therefore, leverage, commodity-price volatility and the parent's refinancing requirements should have little impact on the rating." 
+      text: "The company's diversified and low-cost operations, improving aluminium profitability, recovery in commodity prices and strong liquidity support its credit profile. However, high leverage, large capex and dividend outflows, commodity-price volatility and parent-level refinancing requirements continue to constrain further improvement in the rating." 
     } 
   ], 
-  answer: "C" 
+  answer: "D" 
 };
+
 
 
 export default { id: "CASE_05", caseNumber: 5, caseTitle: "CASE 05", caseText: CASE_TEXT, questions: [QUESTION_1, QUESTION_2] };

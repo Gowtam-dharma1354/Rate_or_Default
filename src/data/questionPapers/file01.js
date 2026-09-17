@@ -1,67 +1,102 @@
 const CASE_TEXT = `Company Profile 
  
-Project Phoenix is a large private-sector bank with total assets of ₹2,57,827 crore and total advances of ₹1,71,443 crore as of 31 March 2020. 
+"Project Phoenix" is a private-sector bank that has recently undergone a major reconstruction following a period of severe financial and operational stress. 
  
-The bank has recently gone through a severe period of financial and operational stress. 
+The bank has been rebuilding its capital, liquidity and deposit base following the difficulties faced earlier in 2020. 
  
-The Government of India imposed a moratorium on the bank on 5 March 2020. The moratorium was lifted on 18 March 2020 after a reconstruction scheme was implemented. 
+Since the reconstruction, the bank has received substantial capital support, raised additional equity from institutional investors and improved its liquidity position. 
  
-Under the reconstruction scheme, 8 entities, mainly banks, infused ₹10,000 crore of equity into the bank. SBI contributed ₹6,050 crore and became the largest shareholder with a 48.21% stake. 
+However, the bank continues to face significant challenges in rebuilding depositor confidence, improving asset quality, establishing a stable operating model and strengthening its governance and compliance framework. 
  
-The bank's board was reconstituted and a former SBI senior executive became its MD & CEO. 
+Key Information 
  
-Financial Information (₹ Crore unless stated otherwise) 
+- Total assets stood at approximately ₹2,55,485 crore as of 30 June 2020. 
+- Total advances stood at approximately ₹1,64,510 crore. 
+- The bank had 1,139 branches as of 30 June 2020. 
+- Total deposits increased to approximately ₹1,17,360 crore as of 30 June 2020 from ₹1,05,364 crore as of 31 March 2020. 
+- The deposit base had experienced significant withdrawals during the earlier period of financial stress but has shown signs of stabilisation. 
+- The bank has launched initiatives to acquire new customers, retain existing depositors and win back customers who had withdrawn funds. 
  
-Particulars | FY2019 | FY2020 
-Total Assets | 3,80,826 | 2,57,827 
-Net Advances | 2,41,500 | 1,71,443 
-Deposits | 2,27,610 | 1,05,364 
-Total Income | 14,399 | 10,247 
-Profit After Tax | 1,720 | -22,715 
-Gross NPA | 3.2% | 16.8% 
-Net NPA | 1.9% | 5.0% 
-Provision Coverage Ratio | 43.1% | 73.8% 
-Tier I Capital Adequacy Ratio | 11.3% | 6.5% 
-Overall Capital Adequacy Ratio | 16.5% | 8.5% 
-Return on Assets | 0.5% | -7.1% 
+Capital Position 
  
-Liquidity & Deposit Position 
+- The bank raised ₹15,000 crore through a follow-on public offer in July 2020. 
+- The FPO received interest from both domestic and global institutional investors. 
+- Approximately ₹4,098 crore was raised from anchor investors. 
+- Pro-forma CET1 ratio improved to 13.4% from 6.3% as of 31 March 2020. 
+- Overall capital adequacy ratio improved to 20.0% from 8.5% as of 31 March 2020. 
+- The current capital ratios are well above the minimum regulatory requirement. 
+- Earlier, the bank had received ₹10,000 crore of equity from 8 entities, primarily banks, as part of the reconstruction scheme. 
  
-- Deposits declined by approximately ₹28,000 crore between 31 December 2019 and 5 March 2020. 
-- Following the lifting of the moratorium, deposits fell by another approximately ₹30,000 crore between 18 March and 31 March 2020. 
-- Deposits stood at ₹1,05,364 crore on 31 March 2020. 
-- By 2 May 2020, deposits had stabilised at approximately ₹1,02,717 crore. 
-- Liquidity Coverage Ratio was 40%, compared with a regulatory requirement of 100% at the time. 
+Liquidity 
+ 
+- Liquidity Coverage Ratio improved to 114.1% as of 30 June 2020 from 37.0% as of 31 March 2020. 
+- The regulatory minimum requirement was 80% at the time. 
+- The bank repaid ₹35,000 crore of the ₹50,000 crore special liquidity facility obtained from the RBI in March 2020. 
+- Liquidity support is expected to remain available from key stakeholders if required. 
+- The bank can also raise funds through certificates of deposit, securitisation and inter-bank participation certificates. 
  
 Asset Quality 
  
-- Gross NPA increased from 3.2% to 16.8% in one year. 
-- Net NPA increased from 1.9% to 5.0%. 
-- SMA-1 and SMA-2 portfolio was approximately ₹11,100 crore. 
-- The bank reported a ₹22,715 crore loss in FY2020. 
-- Further deterioration in asset quality could increase credit costs and put additional pressure on profitability and capital. 
+- Gross NPA increased sharply to 17.3% as of 30 June 2020 from 5.0% a year earlier. 
+- Net NPA stood at 4.96%. 
+- Gross NPAs were approximately ₹32,703 crore as of 30 June 2020. 
+- Provision coverage ratio improved to 75.1% from 43.1% a year earlier. 
+- The bank reported a profit of approximately ₹45 crore in the quarter ended June 2020. 
+- Annualised credit cost declined to 1.7% in the first quarter of fiscal 2021 from 10.3% for fiscal 2020. 
+- Despite the improvement in profitability, further deterioration in asset quality could affect earnings and capital. 
  
-Capital & Support 
+Business Model 
  
-- ₹10,000 crore equity was infused by 8 financial institutions. 
-- CET1 ratio improved from 0.6% to 6.3% between 31 December 2019 and 31 March 2020. 
-- Overall capital adequacy ratio improved from 4.1% to 8.5%. 
-- However, capital ratios remained below regulatory requirements at the time. 
-- The bank was expected to raise additional capital. 
-- RBI, Government of India and other stakeholders had undertaken measures to support the bank's liquidity. 
-- SBI held 48.21% of the bank and had publicly stated that it would not sell its stake for three years.`;
+- The bank plans to focus on granular retail asset segments and selective working-capital financing for the corporate segment. 
+- The ability to scale the new business model while maintaining asset quality and profitability remains to be demonstrated. 
+- The bank needs to build a strong retail liabilities franchise and establish a stable and sound operating model. 
+- Strengthening governance and compliance frameworks remains important for the long-term success of the bank. 
+ 
+Systemic & Shareholder Support 
+ 
+- Extraordinary systemic support from key stakeholders remains an important credit strength. 
+- The Ministry of Finance, RBI and SBI have reiterated their support for protecting depositors. 
+- SBI remains the largest shareholder after the FPO, with approximately 30% ownership. 
+- SBI invested approximately ₹1,740 crore in the FPO. 
+- SBI had earlier contributed ₹6,050 crore of the ₹10,000 crore equity infusion under the reconstruction scheme. 
+- SBI has publicly stated that it would not sell its stake for three years from implementation of the reconstruction scheme. 
+- Two directors on the bank's board are from SBI. 
+ 
+Key Risks 
+ 
+- Deposits remain confidence-sensitive and could come under pressure again. 
+- The bank needs to demonstrate that it can build a stable retail deposit franchise. 
+- Asset quality remains weak, with gross NPA at 17.3%. 
+- Further slippages could weaken profitability and capital. 
+- The new business model has not yet been tested over a sufficiently long period. 
+- The bank operates in an environment affected by the Covid-19 pandemic and economic uncertainty. 
+- Borrower payment behaviour after the moratorium period could affect future asset quality. 
+- Governance and compliance improvements remain critical. 
+ 
+Positive Factors 
+ 
+- ₹15,000 crore FPO substantially strengthened capital. 
+- CET1 and overall CAR are now well above regulatory requirements. 
+- LCR improved to 114.1%. 
+- Deposits increased to ₹1,17,360 crore. 
+- ₹35,000 crore of the RBI special liquidity facility has been repaid. 
+- Credit costs have declined significantly. 
+- The bank returned to a small profit in the June 2020 quarter. 
+- Strong systemic and SBI support continues. 
+ Previous Rating:- BBB
+Decision Date: 27 August 2020`;
 
 const QUESTION_1 = { 
   id: "Q1", 
   prompt: 
-    "# QUESTION 1 — ASSIGN A RATING\n\nBased ONLY on the information available as of 5 June 2020, what rating would you assign to the bank's long-term debt instruments?\n\nSelect ONE:", 
+    "# QUESTION 1 — ASSIGN A RATING\n\nBased ONLY on the information available as of 27 August 2020, what rating would you assign to Project Phoenix's long-term debt instruments?\n\nSelect ONE:", 
   options: [ 
-    { label: "A", value: "A", text: "A-" }, 
-    { label: "B", value: "B", text: "BBB+" }, 
-    { label: "C", value: "C", text: "BBB" }, 
-    { label: "D", value: "D", text: "BBB-" } 
+    { label: "A", value: "A", text: "BBB-" }, 
+    { label: "B", value: "B", text: "BBB" }, 
+    { label: "C", value: "C", text: "BB+" }, 
+    { label: "D", value: "D", text: "A-" } 
   ], 
-  answer: "C" 
+  answer: "B" 
 }; 
  
 const QUESTION_2 = { 
@@ -72,26 +107,27 @@ const QUESTION_2 = {
     { 
       label: "A", 
       value: "A", 
-      text: "The bank's credit profile is supported by extraordinary systemic and shareholder support, including ₹10,000 crore of equity infusion and SBI's 48.21% ownership; however, severe asset-quality deterioration, deposit outflows, weak capitalisation and liquidity concerns constrain the rating." 
+      text: "The bank's capital and liquidity have improved substantially following the FPO and repayment of the RBI liquidity facility. Since CET1 is 13.4%, CAR is 20% and LCR is 114.1%, the earlier asset-quality concerns should no longer materially constrain the rating." 
     }, 
     { 
       label: "B", 
       value: "B", 
-      text: "The bank's severe deterioration in asset quality, ₹22,715 crore loss, large deposit withdrawals, weak capital ratios and very low liquidity coverage indicate substantial credit weakness. These factors should dominate the assessment despite recent support measures." 
+      text: "The bank's gross NPA of 17.3%, net NPA of 4.96% and history of significant deposit withdrawals indicate that its standalone credit profile remains weak. The improvement in capital and liquidity is insufficient to support an investment-grade rating." 
     }, 
     { 
       label: "C", 
       value: "C", 
-      text: "Strong systemic support and the significant equity infusion substantially reduce the credit risk. The involvement of SBI, RBI and the Government provides sufficient protection despite the bank's recent financial difficulties." 
+      text: "The bank's strong systemic support, SBI ownership, improved capitalisation and adequate liquidity substantially reduce its credit risk. The return to profitability and recovery in deposits indicate that the bank's new business model has already been successfully established." 
     }, 
     { 
       label: "D", 
       value: "D", 
-      text: "The bank's problems are largely temporary because the moratorium has been lifted, full banking operations have resumed, and deposits had begun stabilising. Therefore, the bank's strong franchise and future retail strategy justify a high investment-grade rating." 
+      text: "The significant improvement in capital and liquidity, recovery in the deposit base, repayment of the RBI liquidity facility and continued systemic and SBI support strengthen the credit profile. However, weak asset quality, the need to rebuild a stable retail franchise and the still-unproven business model constrain the rating despite these improvements." 
     } 
   ], 
-  answer: "A" 
+  answer: "D" 
 };
+
 
 
 export default { id: "CASE_01", caseNumber: 1, caseTitle: "CASE 01", caseText: CASE_TEXT, questions: [QUESTION_1, QUESTION_2] };
