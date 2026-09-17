@@ -55,6 +55,10 @@ const getQuestionScore = (question, answer) => {
     (option) => normalizeAnswer(option.value) === normalizeAnswer(question.answer)
   );
 
+  if (normalizeAnswer(answer) === normalizeAnswer(question.answer)) {
+    return { isCorrect: true, pointsAwarded: exactPoints, scoreType: 'correct' };
+  }
+
   if (!selectedOption || !correctOption) {
     const isCorrect = checkAnswer(answer, question.answer, question.acceptedAnswers || []);
     return { isCorrect, pointsAwarded: isCorrect ? exactPoints : 0, scoreType: isCorrect ? 'correct' : 'incorrect' };
