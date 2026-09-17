@@ -33,6 +33,47 @@ const checkAnswer = (userAnswer, canonicalAnswer, acceptedAnswers = []) => {
   return false;
 };
 
+const RATING_SCALE = [
+  'AAA',
+  'AA+', 'AA', 'AA-',
+  'A+', 'A', 'A-',
+  'BBB+', 'BBB', 'BBB-',
+  'BB+', 'BB', 'BB-',
+  'B+', 'B', 'B-',
+  'C',
+  'D'
+];
+
+const getQuestionScore = (question, answer) => {
+  const exactPoints = question.id === 'Q1' ? 10 : 20;
+  const selectedOption = question.options?.find(
+    (option) => normalizeAnswer(option.value) === normalizeAnswer(answer)
+  );
+  const correctOption = question.options?.find(
+    (option) => normalizeAnswer(option.value) === normalizeAnswer(question.answer)
+  );
+
+  if (!selectedOption || !correctOption) {
+    const isCorrect = checkAnswer(answer, question.answer, question.acceptedAnswers || []);
+    return { isCorrect, pointsAwarded: isCorrect ? exactPoints : 0, scoreType: isCorrect ? 'correct' : 'incorrect' };
+  }
+
+  const selectedRating = normalizeAnswer(selectedOption.text).toUpperCase();
+  const correctRating = normalizeAnswer(correctOption.text).toUpperCase();
+  const correctIndex = RATING_SCALE.indexOf(correctRating);
+  const selectedIndex = RATING_SCALE.indexOf(selectedRating);
+
+  if (selectedRating === correctRating) {
+    return { isCorrect: true, pointsAwarded: exactPoints, scoreType: 'correct' };
+  }
+
+  if (question.id === 'Q1' && correctIndex !== -1 && selectedIndex !== -1 && Math.abs(correctIndex - selectedIndex) === 1) {
+    return { isCorrect: false, pointsAwarded: 5, scoreType: 'nearby' };
+  }
+
+  return { isCorrect: false, pointsAwarded: 0, scoreType: 'incorrect' };
+};
+
 const getQuestionFromCase = ({ caseNumber, questionId, questionIndex }) => {
   const targetCase = getQuestionPaper(null, caseNumber);
   if (!targetCase) return null;
@@ -91,21 +132,11 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Question configuration not found for this case' });
     }
 
-    const isCorrect = checkAnswer(answer, selectedQuestion.answer, selectedQuestion.acceptedAnswers || []);
-
-    const { data: settingsRow } = await supabase
-      .from('competition_settings')
-      .select('question_points')
-      .order('created_at', { ascending: false })
-      .limit(1)
-      .maybeSingle();
-
-    const questionPoints = settingsRow?.question_points || { Q1: 10, Q2: 20 };
-    const pointsAwarded = Number(questionPoints[selectedQuestion.id] ?? selectedQuestion.points ?? 0);
+    const { isCorrect, pointsAwarded, scoreType } = getQuestionScore(selectedQuestion, answer);
 
     const { data: existingCaseAnswer } = await supabase
       .from('team_case_answers')
-      .select('attempt_number')
+      .select('attempt_number, points_awarded, is_correct')
       .eq('session_id', session.id)
       .eq('team_id', team.id)
       .eq('case_number', caseNumber)
@@ -128,7 +159,7 @@ export default async function handler(req, res) {
           selected_option: answer,
           submitted_answer: answer,
           is_correct: isCorrect,
-          points_awarded: isCorrect ? pointsAwarded : 0,
+          points_awarded: pointsAwarded,
           attempt_number: attemptNumber,
           raw_payload: {
             case_number: caseNumber,
@@ -154,8 +185,10 @@ export default async function handler(req, res) {
       .eq('team_id', team.id)
       .maybeSingle();
 
-    const nextTotalScore = Number(existingScore?.total_score ?? 0) + (isCorrect ? pointsAwarded : 0);
-    const nextCorrectAnswers = Number(existingScore?.correct_answers ?? 0) + (isCorrect ? 1 : 0);
+    const previousPoints = Number(existingCaseAnswer?.points_awarded ?? 0);
+    const previousCorrect = existingCaseAnswer?.is_correct ? 1 : 0;
+    const nextTotalScore = Number(existingScore?.total_score ?? 0) - previousPoints + pointsAwarded;
+    const nextCorrectAnswers = Number(existingScore?.correct_answers ?? 0) - previousCorrect + (isCorrect ? 1 : 0);
     const nextCasesCompleted = Math.max(Number(existingScore?.cases_completed ?? 0), caseNumber);
 
     const { error: upsertScoreErr } = await supabase
@@ -196,7 +229,8 @@ export default async function handler(req, res) {
         team_name: team_name || team.team_name || null,
         submitted_answer: answer,
         is_correct: isCorrect,
-        points_awarded: isCorrect ? pointsAwarded : 0,
+        points_awarded: pointsAwarded,
+        score_type: scoreType,
         team_id: team_id || team.id
       }
     });
@@ -209,7 +243,8 @@ export default async function handler(req, res) {
       question_number: questionNumber,
       question_id: selectedQuestion.id,
       is_correct: isCorrect,
-      points_awarded: isCorrect ? pointsAwarded : 0,
+      points_awarded: pointsAwarded,
+      score_type: scoreType,
       total_score: nextTotalScore,
       attempt_number: attemptNumber
     });

@@ -56,7 +56,7 @@ const QUESTION_1 = {
   prompt: 
     "# QUESTION 1 — ASSIGN A RATING\n\nBased ONLY on the information available as of 5 June 2020, what rating would you assign to the bank's long-term debt instruments?\n\nSelect ONE:", 
   options: [ 
-    { label: "A", value: "A", text: "A" }, 
+    { label: "A", value: "A", text: "A-" }, 
     { label: "B", value: "B", text: "BBB+" }, 
     { label: "C", value: "C", text: "BBB" }, 
     { label: "D", value: "D", text: "BBB-" } 
