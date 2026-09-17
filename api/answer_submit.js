@@ -46,8 +46,10 @@ const RATING_SCALE = [
 
 const getQuestionScore = (question, answer) => {
   const exactPoints = question.id === 'Q1' ? 10 : 20;
+  const normalizedAnswer = normalizeAnswer(answer);
   const selectedOption = question.options?.find(
-    (option) => normalizeAnswer(option.value) === normalizeAnswer(answer)
+    (option) => normalizeAnswer(option.value) === normalizedAnswer
+      || normalizeAnswer(option.text) === normalizedAnswer
   );
   const correctOption = question.options?.find(
     (option) => normalizeAnswer(option.value) === normalizeAnswer(question.answer)
