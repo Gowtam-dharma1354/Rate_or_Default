@@ -69,13 +69,14 @@ export default function FileQuestion({
         answer: selectedOption
       });
 
+      const payload = await response.json().catch(() => null);
+
       if (!response.ok) {
-        const payload = await response.json().catch(() => null);
         throw new Error(payload?.error || "Unable to submit your answer.");
       }
 
       if (questionIndex >= (question?.questions?.length || 1) - 1) {
-        await onAnswerCorrect(questionIndex + 1);
+        await onAnswerCorrect(questionIndex + 1, payload?.total_score);
       } else {
         setQuestionIndex((prev) => prev + 1);
       }

@@ -486,8 +486,11 @@ function PlayerExperience() {
     }
   };
 
-  const handleAnswerCorrect = async (attemptNumber) => {
-    const nextScore = Number(teamData?.score || 0) + getFileScore(currentFile);
+  const handleAnswerCorrect = async (attemptNumber, submittedScore) => {
+    const submittedScoreNumber = Number(submittedScore);
+    const nextScore = Number.isFinite(submittedScoreNumber)
+      ? submittedScoreNumber
+      : Number(teamData?.score || 0) + getFileScore(currentFile);
     const nextCompletedFiles = Math.min(totalFiles, completedFiles + 1);
 
     setCompletedFiles(nextCompletedFiles);
